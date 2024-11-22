@@ -6,10 +6,6 @@ body {
     background-color: #f4f4f4;
   }
   
-  h1, h2 {
-    color: #333;
-  }
-  
   /* Навигационное меню */
   .navbar {
     background-color: #333;
@@ -38,20 +34,12 @@ body {
     text-decoration: underline;
   }
   
-  /* Секции */
-  section {
-    padding: 20px;
-    margin: 20px 0;
-    background-color: white;
-    border-radius: 8px;
-  }
-  
   /* Слайдер */
   .slider-container {
     position: relative;
     width: 100%;
-    max-width: 800px;
-    margin: auto;
+    max-width: 1000px;
+    margin: 30px auto;
     overflow: hidden;
   }
   
@@ -63,11 +51,37 @@ body {
   .slide {
     min-width: 100%;
     box-sizing: border-box;
+    position: relative;
   }
   
   .slide-image {
     width: 100%;
     height: auto;
+  }
+  
+  /* Текст на слайде */
+  .slide-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+  }
+  
+  .slide-text h2 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .slide-text a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .slide-text a:hover {
+    text-decoration: underline;
   }
   
   /* Кнопки слайдера */
