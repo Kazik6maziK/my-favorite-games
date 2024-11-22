@@ -72,8 +72,9 @@ body {
   
   .slide {
     display: none; /* Все слайды скрыты по умолчанию */
-    box-sizing: border-box;
     min-width: 100%;
+    box-sizing: border-box;
+    position: relative;
   }
   
   .slide-image {
