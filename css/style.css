@@ -1,9 +1,52 @@
+/* Общие стили */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
   }
   
+  h1, h2 {
+    color: #333;
+  }
+  
+  /* Навигационное меню */
+  .navbar {
+    background-color: #333;
+    padding: 10px;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navbar ul li {
+    margin: 0 15px;
+  }
+  
+  .navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .navbar ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Секции */
+  section {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: white;
+    border-radius: 8px;
+  }
+  
+  /* Слайдер */
   .slider-container {
     position: relative;
     width: 100%;
@@ -20,7 +63,6 @@ body {
   .slide {
     min-width: 100%;
     box-sizing: border-box;
-    position: relative;
   }
   
   .slide-image {
@@ -28,33 +70,7 @@ body {
     height: auto;
   }
   
-  .slide-text {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  }
-  
-  .slide-text h2 {
-    margin: 0;
-    font-size: 24px;
-  }
-  
-  .slide-text a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #000;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-  }
-  
-  .slide-text a:hover {
-    background-color: #555;
-  }
-  
+  /* Кнопки слайдера */
   button {
     position: absolute;
     top: 50%;

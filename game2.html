@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Игра 2 - Мои любимые игры</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Навигационное меню -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="game1.html">Игра 1</a></li>
+      <li><a href="game2.html">Игра 2</a></li>
+      <li><a href="game3.html">Игра 3</a></li>
+      <li><a href="game4.html">Игра 4</a></li>
+    </ul>
+  </nav>
+
+  <!-- Описание игры -->
+  <section class="game-description">
+    <h1>Игра 2</h1>
+    <p>Здесь будет описание игры. Расскажите о её особенностях, механике и интересных моментах.</p>
+  </section>
+
+  <!-- Трейлер игры (YouTube) -->
+  <section class="game-trailer">
+    <h2>Трейлер игры</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/your_video_id" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </section>
+
+  <!-- Слайдер с картинками игры -->
+  <section class="game-slider">
+    <h2>Иллюстрации игры</h2>
+    <div class="slider-container">
+      <div class="slider">
+        <div class="slide">
+          <img src="images/game1_image1.jpg" alt="Скриншот 1 игры 2" class="slide-image">
+        </div>
+        <div class="slide">
+          <img src="images/game1_image2.jpg" alt="Скриншот 2 игры 2" class="slide-image">
+        </div>
+        <div class="slide">
+          <img src="images/game1_image3.jpg" alt="Скриншот 3 игры 2" class="slide-image">
+        </div>
+      </div>
+      <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- Ваше мнение об игре -->
+  <section class="game-opinion">
+    <h2>Моё мнение об игре</h2>
+    <p>Здесь будет ваше личное мнение об игре, почему она вам нравится и что вам в ней особенно нравится.</p>
+  </section>
+
+  <!-- Смешные моменты (гиифки/видео) -->
+  <section class="game-moments">
+    <h2>Смешные моменты из игры</h2>
+    <p>Здесь можно добавить ваши смешные моменты — гифки или видео.</p>
+    <img src="images/funny_moment.gif" alt="Смешной момент 1" class="moment-image">
+    <video width="320" height="240" controls>
+      <source src="videos/funny_moment.mp4" type="video/mp4">
+      Ваш браузер не поддерживает видео тег.
+    </video>
+  </section>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
