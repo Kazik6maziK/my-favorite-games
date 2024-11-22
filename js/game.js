@@ -1,7 +1,8 @@
-let slideIndexIllustrations = 0;  // Индекс для иллюстраций
-let slideIndexMoments = 0;        // Индекс для смешных моментов
+// Индексы для слайдера иллюстраций и смешных моментов
+let slideIndexIllustrations = 0;  
+let slideIndexMoments = 0;        
 
-// Функция для переключения слайдов (в зависимости от типа слайдера)
+// Функция для переключения слайдов
 function moveSlide(step, type) {
   let slides;
   let totalSlides;
@@ -10,17 +11,16 @@ function moveSlide(step, type) {
     slides = document.querySelectorAll('.slide');
     totalSlides = slides.length;
     slideIndexIllustrations += step;
+
+    // Если индекс выходит за пределы, начинаем с первого или последнего
+    if (slideIndexIllustrations >= totalSlides) slideIndexIllustrations = 0;
+    if (slideIndexIllustrations < 0) slideIndexIllustrations = totalSlides - 1;
   } else if (type === 'moments') {
     slides = document.querySelectorAll('.funny-slide');
     totalSlides = slides.length;
     slideIndexMoments += step;
-  }
 
-  // Если индекс выходит за пределы, начинаем с первого или последнего
-  if (type === 'illustrations') {
-    if (slideIndexIllustrations >= totalSlides) slideIndexIllustrations = 0;
-    if (slideIndexIllustrations < 0) slideIndexIllustrations = totalSlides - 1;
-  } else if (type === 'moments') {
+    // Если индекс выходит за пределы, начинаем с первого или последнего
     if (slideIndexMoments >= totalSlides) slideIndexMoments = 0;
     if (slideIndexMoments < 0) slideIndexMoments = totalSlides - 1;
   }
@@ -40,15 +40,14 @@ function moveSlide(step, type) {
 
 // Инициализация слайдера при загрузке страницы
 document.addEventListener('DOMContentLoaded', () => {
+  // Инициализация слайдера иллюстраций
   const illustrationSlides = document.querySelectorAll('.slide');
-  const momentSlides = document.querySelectorAll('.funny-slide');
-
-  // Для иллюстраций
   illustrationSlides.forEach((slide, index) => {
     if (index !== slideIndexIllustrations) slide.style.display = 'none';
   });
 
-  // Для смешных моментов
+  // Инициализация слайдера смешных моментов
+  const momentSlides = document.querySelectorAll('.funny-slide');
   momentSlides.forEach((slide, index) => {
     if (index !== slideIndexMoments) slide.style.display = 'none';
   });
