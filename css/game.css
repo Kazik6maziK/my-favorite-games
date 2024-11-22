@@ -56,10 +56,6 @@ body {
     text-decoration: underline;
   }
 
-  .game-trailer {
-    max-width: 800px;
-
-  }
   /* Слайдер */
 .slider-container {
     position: relative;
@@ -104,4 +100,10 @@ body {
   
   button.next {
     right: 0;
+  }
+
+  .slide video {
+    width: 100%;
+    height: auto;
+    display: block;
   }
