@@ -83,12 +83,21 @@
   <!-- Смешные моменты (гиифки/видео) -->
   <section class="game-moments">
     <h2>Смешные моменты из игры</h2>
-    <p>Здесь можно добавить ваши смешные моменты — гифки или видео.</p>
-    <img src="images/funny_moment.gif" alt="Смешной момент 1" class="moment-image">
-    <video width="320" height="240" controls>
-      <source src="videos/funny_moment.mp4" type="video/mp4">
-      Ваш браузер не поддерживает видео тег.
-    </video>
+    <div class="slider-container">
+      <div class="slider">
+        <div class="slide">
+          <img src="images/funny_moment1.gif" alt="Смешной момент 1" class="slide-image">
+        </div>
+        <div class="slide">
+          <img src="images/funny_moment2.gif" alt="Смешной момент 2" class="slide-image">
+        </div>
+        <div class="slide">
+          <img src="images/funny_moment3.gif" alt="Смешной момент 3" class="slide-image">
+        </div>
+      </div>
+      <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
   </section>
 
   <script src="js/script.js"></script>

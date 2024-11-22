@@ -12,18 +12,16 @@ function moveSlide(step) {
   if (slideIndex < 0) slideIndex = totalSlides - 1;
 
   // Скрываем все слайды
-  slides.forEach(slide => {
-    slide.style.display = 'none';
+  slides.forEach((slide, index) => {
+    slide.classList.remove('active'); // Убираем класс active у всех слайдов
   });
 
   // Показываем текущий слайд
-  slides[slideIndex].style.display = 'block';
+  slides[slideIndex].classList.add('active'); // Добавляем класс active к текущему слайду
 }
 
 // Инициализация слайдера при загрузке страницы
 document.addEventListener('DOMContentLoaded', () => {
   const slides = document.querySelectorAll('.slide');
-  slides.forEach((slide, index) => {
-    if (index !== slideIndex) slide.style.display = 'none'; // Скрываем все слайды, кроме первого
-  });
+  slides[slideIndex].classList.add('active'); // Устанавливаем класс active для первого слайда
 });

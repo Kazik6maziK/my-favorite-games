@@ -5,8 +5,9 @@ body {
     padding: 0;
     background-color: #f4f4f4;
   }
+  
   /* Стиль для вступительного текста */
-.intro-text {
+  .intro-text {
     text-align: center;
     padding: 40px;
     background-color: #f4f4f4;
@@ -65,13 +66,19 @@ body {
   
   .slider {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out; /* Плавный переход */
   }
   
   .slide {
     min-width: 100%;
     box-sizing: border-box;
     position: relative;
+    opacity: 0; /* Слайды будут скрыты по умолчанию */
+    transition: opacity 0.5s ease-in-out; /* Плавное появление */
+  }
+  
+  .slide.active {
+    opacity: 1; /* Показываем активный слайд */
   }
   
   .slide-image {
@@ -127,5 +134,10 @@ body {
   
   .next {
     right: 0;
+  }
+  
+  /* Плавные кнопки */
+  button.prev, button.next {
+    transition: background-color 0.3s ease; /* Плавная анимация кнопок */
   }
   
