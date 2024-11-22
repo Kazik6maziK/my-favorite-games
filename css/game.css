@@ -66,14 +66,13 @@ body {
   }
   
   .slider {
+    position: relative;
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    overflow: hidden;
   }
   
   .slide {
-    min-width: 100%;
-    box-sizing: border-box;
-    position: relative;
+    display: none; /* Все слайды скрыты по умолчанию */
   }
   
   .slide-image {
@@ -81,52 +80,22 @@ body {
     height: auto;
   }
   
-  /* Текст на слайде */
-  .slide-text {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-  }
-  
-  .slide-text h2 {
-    margin: 0;
-    font-size: 24px;
-  }
-  
-  .slide-text a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-  }
-  
-  .slide-text a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Кнопки слайдера */
-  button {
+  button.prev, button.next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    padding: 20px;
-    font-size: 18px;
+    padding: 10px;
     cursor: pointer;
+    z-index: 10;
   }
   
-  button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+  button.prev {
+    left: 10px;
   }
   
-  .prev {
-    left: 0;
-  }
-  
-  .next {
-    right: 0;
+  button.next {
+    right: 10px;
   }
