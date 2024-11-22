@@ -3,38 +3,41 @@ let currentSlideIndex2 = 0; // Индекс текущего слайда для
 
 function moveSlide(direction, sliderId) {
   let slides;
+  let currentIndex;
+
   if (sliderId === 'slider1') {
     slides = document.querySelectorAll(`#${sliderId} .slide`);
-    currentSlideIndex1 += direction;
-    if (currentSlideIndex1 < 0) {
-      currentSlideIndex1 = slides.length - 1;
-    } else if (currentSlideIndex1 >= slides.length) {
-      currentSlideIndex1 = 0;
-    }
+    currentIndex = currentSlideIndex1;
   } else if (sliderId === 'slider2') {
     slides = document.querySelectorAll(`#${sliderId} .slide`);
-    currentSlideIndex2 += direction;
-    if (currentSlideIndex2 < 0) {
-      currentSlideIndex2 = slides.length - 1;
-    } else if (currentSlideIndex2 >= slides.length) {
-      currentSlideIndex2 = 0;
-    }
+    currentIndex = currentSlideIndex2;
   }
 
-  // Прячем все слайды
+  // Скрыть все слайды
   slides.forEach((slide) => {
     slide.style.display = 'none';
   });
 
+  // Обновляем индекс слайда
+  currentIndex += direction;
+  if (currentIndex < 0) {
+    currentIndex = slides.length - 1; // Если индекс меньше 0, возвращаемся к последнему слайду
+  } else if (currentIndex >= slides.length) {
+    currentIndex = 0; // Если индекс больше последнего слайда, идем к первому
+  }
+
   // Показываем текущий слайд
+  slides[currentIndex].style.display = 'block';
+
+  // Сохраняем текущий индекс
   if (sliderId === 'slider1') {
-    slides[currentSlideIndex1].style.display = 'block';
+    currentSlideIndex1 = currentIndex;
   } else if (sliderId === 'slider2') {
-    slides[currentSlideIndex2].style.display = 'block';
+    currentSlideIndex2 = currentIndex;
   }
 }
 
-// Инициализация первого слайдера
+// Инициализация слайдера при загрузке страницы
 document.addEventListener('DOMContentLoaded', function () {
   moveSlide(0, 'slider1'); // Показываем первый слайд при загрузке страницы
   moveSlide(0, 'slider2'); // Показываем первый слайд при загрузке страницы
