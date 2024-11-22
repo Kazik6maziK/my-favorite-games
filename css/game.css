@@ -55,6 +55,7 @@ body {
     text-decoration: underline;
   }
 
+
 /* Контейнер для трейлера */
 .trailer-container {
   position: relative; /* Для абсолютного позиционирования iframe */
@@ -119,8 +120,8 @@ body {
     right: 0;
   }
 
-  .slide video {
-    width: auto;
-    height: auto;
-    display: block;
+  .slide-video {
+    width: 100%; /* Растягиваем по ширине контейнера */
+    height: 100%; /* Высота автоматически адаптируется */
+    object-fit: cover;
   }
