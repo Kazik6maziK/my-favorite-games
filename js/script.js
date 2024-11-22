@@ -1,27 +1,19 @@
-let slideIndex = 0;
+let currentSlide = 0;
 
-// Функция для переключения слайдов
-function moveSlide(step) {
-  const slides = document.querySelectorAll('.slide'); // Получаем все слайды
-  const totalSlides = slides.length;
+function showSlide(index) {
+  const slides = document.querySelectorAll('.slide');
+  if (index >= slides.length) currentSlide = 0;
+  if (index < 0) currentSlide = slides.length - 1;
 
-  slideIndex += step;
-
-  // Если индекс выходит за пределы, начинаем с первого или последнего
-  if (slideIndex >= totalSlides) slideIndex = 0;
-  if (slideIndex < 0) slideIndex = totalSlides - 1;
-
-  // Скрываем все слайды
-  slides.forEach(slide => {
-    slide.classList.remove('active'); // Убираем класс active у всех слайдов
-  });
-
-  // Показываем текущий слайд
-  slides[slideIndex].classList.add('active'); // Добавляем класс active к текущему слайду
+  const slideWidth = slides[0].clientWidth;
+  const slider = document.querySelector('.slider');
+  slider.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
 }
 
-// Инициализация слайдера при загрузке страницы
-document.addEventListener('DOMContentLoaded', () => {
-  const slides = document.querySelectorAll('.slide');
-  slides[slideIndex].classList.add('active'); // Устанавливаем класс active для первого слайда
-});
+function moveSlide(direction) {
+  currentSlide += direction;
+  showSlide(currentSlide);
+}
+
+// Инициализация слайдера
+showSlide(currentSlide);
