@@ -56,7 +56,7 @@ body {
     text-decoration: underline;
   }
   
-/* Общие стили для слайдеров */
+  /* Слайдер */
 .slider-container {
     position: relative;
     width: 100%;
@@ -70,17 +70,43 @@ body {
     transition: transform 0.5s ease-in-out;
   }
   
-  .slide, .funny-slide {
+  .slide {
     min-width: 100%;
     box-sizing: border-box;
     position: relative;
   }
   
-  .slide-image, .moment-image {
+  .slide-image {
     width: 100%;
     height: auto;
   }
   
+  /* Текст на слайде */
+  .slide-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+  }
+  
+  .slide-text h2 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .slide-text a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .slide-text a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Кнопки слайдера */
   button {
     position: absolute;
     top: 50%;
@@ -91,18 +117,16 @@ body {
     padding: 20px;
     font-size: 18px;
     cursor: pointer;
-    z-index: 10;
   }
   
   button:hover {
     background-color: rgba(0, 0, 0, 0.8);
   }
   
-  button.prev {
+  .prev {
     left: 0;
   }
   
-  button.next {
+  .next {
     right: 0;
   }
-  
