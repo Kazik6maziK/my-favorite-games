@@ -44,7 +44,7 @@
   <section class="game-slider intro-text">
     <h2>Иллюстрации игры</h2>
     <div class="slider-container">
-      <div class="slider">
+      <div class="slider" id="slider1">
         <div class="slide">
           <img src="images\game1\hl2src1.jpg" alt="Скриншот 1 игры 1" class="slide-image">
         </div>
@@ -64,8 +64,8 @@
             <img src="images\game1\hl2src6.jpg" alt="Скриншот 6 игры 1" class="slide-image">
         </div>
       </div>
-      <button class="prev">&#10094;</button>
-      <button class="next">&#10095;</button>
+      <button class="prev" onclick="moveSlide(1, 'slider1')">&#10094;</button>
+      <button class="next" onclick="moveSlide(-1, 'slider1')">&#10095;</button>
     </div>
   </section>
 
@@ -95,8 +95,8 @@
           <img src="images/funny_moment3.gif" alt="Смешной момент 3" class="slide-image">
         </div>
       </div>
-      <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-      <button class="next" onclick="moveSlide(1)">&#10095;</button>
+      <button class="prev" onclick="moveSlide(1, 'slider1')">&#10094;</button>
+      <button class="next" onclick="moveSlide(-1, 'slider1')">&#10095;</button>
     </div>
   </section>
 
