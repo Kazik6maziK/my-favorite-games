@@ -56,6 +56,24 @@ body {
     text-decoration: underline;
   }
 
+/* Контейнер для трейлера */
+.trailer-container {
+  position: relative; /* Для абсолютного позиционирования iframe */
+  width: 100%; /* Растягивается на всю ширину родительского элемента */
+  padding-top: 56.25%; /* Соотношение сторон 16:9 */
+  overflow: hidden; /* Скрывает лишнее, если что-то выходит за границы */
+}
+
+/* Сам iframe */
+.trailer-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Растягивается по ширине контейнера */
+  height: 100%; /* Высота соответствует соотношению сторон */
+  border: 0;
+}
+
   /* Слайдер */
 .slider-container {
     position: relative;
