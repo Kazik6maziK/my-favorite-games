@@ -1,35 +1,47 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мои любимые игры: Игра 1</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мои любимые игры</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1>Мои любимые игры</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html" title="Перейти на главную страницу">Главная</a></li>
-                <li><a href="game1.html" title="Подробнее об игре 1">Игра 1</a></li>
-                <li><a href="game2.html" title="Подробнее об игре 2">Игра 2</a></li>
-                <li><a href="game3.html" title="Подробнее об игре 3">Игра 3</a></li>
-                <li><a href="game4.html" title="Подробнее об игре 4">Игра 4</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h2>Игра 1: Название игры</h2>
-        <img src="images/game1.jpg" alt="Скриншот из игры 1" title="Скриншот из игры 1">
-        <p>Краткое описание игры: жанр, сюжет, особенности.</p>
-        <video controls>
-            <source src="videos/game1.mp4" type="video/mp4">
-            Ваш браузер не поддерживает видео.
-        </video>
-    </main>
-    <footer>
-        <p>&copy; 2024 Мой сайт о любимых играх</p>
-    </footer>
+  <div class="slider-container">
+    <div class="slider">
+      <div class="slide">
+        <img src="images/game1.gif" alt="Игра 1" class="slide-image">
+        <div class="slide-text">
+          <h2>Игра 1</h2>
+          <a href="game1.html">Перейти к игре 1</a>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="images/game2.gif" alt="Игра 2" class="slide-image">
+        <div class="slide-text">
+          <h2>Игра 2</h2>
+          <a href="game2.html">Перейти к игре 2</a>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="images/game3.gif" alt="Игра 3" class="slide-image">
+        <div class="slide-text">
+          <h2>Игра 3</h2>
+          <a href="game3.html">Перейти к игре 3</a>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="images/game4.gif" alt="Игра 4" class="slide-image">
+        <div class="slide-text">
+          <h2>Игра 4</h2>
+          <a href="game4.html">Перейти к игре 4</a>
+        </div>
+      </div>
+    </div>
+    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+  </div>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
