@@ -4,22 +4,24 @@ let currentSlideMoments = 0;
 // Функция для отображения слайдов
 function showSlide(sliderId, index) {
   const slides = document.querySelectorAll(`#${sliderId} .slide`);
-  if (index >= slides.length) index = 0;
-  if (index < 0) index = slides.length - 1;
+  const totalSlides = slides.length;
+
+  if (index >= totalSlides) index = 0;  // Переход на первый слайд
+  if (index < 0) index = totalSlides - 1; // Переход на последний слайд
 
   const slideWidth = slides[0].clientWidth;
-  const slider = document.querySelector(`#${sliderId}`);
-  slider.style.transform = `translateX(-${index * slideWidth}px)`;
+  const slider = document.querySelector(`#${sliderId} .slider`);
+  slider.style.transform = `translateX(-${index * slideWidth}px)`; // Сдвиг слайдера по оси X
 
-  return index; // Возвращаем текущий индекс для обновления
+  return index; // Возвращаем новый индекс слайда
 }
 
 // Функция для переключения слайдов
-function moveSlide(sliderId, direction) {
-  if (sliderId === 'illustrations') {
+function moveSlide(sliderType, direction) {
+  if (sliderType === 'illustrations') {
     currentSlideIllustrations += direction;
     currentSlideIllustrations = showSlide('illustrations-slider', currentSlideIllustrations);
-  } else if (sliderId === 'moments') {
+  } else if (sliderType === 'moments') {
     currentSlideMoments += direction;
     currentSlideMoments = showSlide('moments-slider', currentSlideMoments);
   }
@@ -27,6 +29,9 @@ function moveSlide(sliderId, direction) {
 
 // Инициализация слайдеров при загрузке страницы
 document.addEventListener('DOMContentLoaded', () => {
-  showSlide('illustrations-slider', currentSlideIllustrations); // Инициализация слайдера иллюстраций
-  showSlide('moments-slider', currentSlideMoments); // Инициализация слайдера смешных моментов
+  // Инициализация слайдера иллюстраций
+  showSlide('illustrations-slider', currentSlideIllustrations);
+  
+  // Инициализация слайдера смешных моментов
+  showSlide('moments-slider', currentSlideMoments);
 });
