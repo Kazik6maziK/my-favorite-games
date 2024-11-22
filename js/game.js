@@ -1,44 +1,28 @@
-let currentSlideIndex1 = 0; // Индекс текущего слайда для первого слайдера
-let currentSlideIndex2 = 0; // Индекс текущего слайда для второго слайдера
+let currentSlides = { slider1: 0, slider2: 0 };
 
 function moveSlide(direction, sliderId) {
-  let slides;
-  let currentIndex;
+  const slides = document.querySelectorAll(`#${sliderId} .slide`);
+  const totalSlides = slides.length;
 
-  if (sliderId === 'slider1') {
-    slides = document.querySelectorAll(`#${sliderId} .slide`);
-    currentIndex = currentSlideIndex1;
-  } else if (sliderId === 'slider2') {
-    slides = document.querySelectorAll(`#${sliderId} .slide`);
-    currentIndex = currentSlideIndex2;
-  }
+  // Скрываем все слайды
+  slides.forEach(slide => (slide.style.display = "none"));
 
-  // Скрыть все слайды
-  slides.forEach((slide) => {
-    slide.style.display = 'none';
-  });
+  // Обновляем индекс текущего слайда
+  currentSlides[sliderId] += direction;
 
-  // Обновляем индекс слайда
-  currentIndex += direction;
-  if (currentIndex < 0) {
-    currentIndex = slides.length - 1; // Если индекс меньше 0, возвращаемся к последнему слайду
-  } else if (currentIndex >= slides.length) {
-    currentIndex = 0; // Если индекс больше последнего слайда, идем к первому
+  if (currentSlides[sliderId] < 0) {
+    currentSlides[sliderId] = totalSlides - 1;
+  } else if (currentSlides[sliderId] >= totalSlides) {
+    currentSlides[sliderId] = 0;
   }
 
   // Показываем текущий слайд
-  slides[currentIndex].style.display = 'block';
-
-  // Сохраняем текущий индекс
-  if (sliderId === 'slider1') {
-    currentSlideIndex1 = currentIndex;
-  } else if (sliderId === 'slider2') {
-    currentSlideIndex2 = currentIndex;
-  }
+  slides[currentSlides[sliderId]].style.display = "block";
 }
 
-// Инициализация слайдера при загрузке страницы
-document.addEventListener('DOMContentLoaded', function () {
-  moveSlide(0, 'slider1'); // Показываем первый слайд при загрузке страницы
-  moveSlide(0, 'slider2'); // Показываем первый слайд при загрузке страницы
+// Инициализация слайдеров при загрузке
+document.addEventListener("DOMContentLoaded", () => {
+  Object.keys(currentSlides).forEach(sliderId => {
+    moveSlide(0, sliderId); // Показать первый слайд каждого слайдера
+  });
 });

@@ -57,25 +57,19 @@ body {
   }
   
   /* Слайдер */
-.slider-container {
+  .slider-container {
     position: relative;
-    width: 100%;
-    max-width: 1000px;
-    margin: 30px auto;
-    overflow: hidden;
-  }
-  
-  .slider {
-    position: relative;
-    display: flex;
+    max-width: 600px;
+    margin: 20px auto;
     overflow: hidden;
   }
   
   .slide {
-    display: none; /* Все слайды скрыты по умолчанию */
+    display: none;
+    text-align: center;
   }
   
-  .slide-image {
+  .slide img {
     width: 100%;
     height: auto;
   }
@@ -87,8 +81,8 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    padding: 10px;
     cursor: pointer;
+    padding: 10px;
     z-index: 10;
   }
   
