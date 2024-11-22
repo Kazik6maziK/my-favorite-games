@@ -56,7 +56,7 @@ body {
   }
   
   /* Слайдер */
-  .slider-container {
+.slider-container {
     position: relative;
     width: 100%;
     max-width: 1000px;
@@ -75,10 +75,12 @@ body {
     position: relative;
     opacity: 0; /* Слайды будут скрыты по умолчанию */
     transition: opacity 0.5s ease-in-out; /* Плавное появление */
+    display: none; /* Скрыть слайды */
   }
   
   .slide.active {
     opacity: 1; /* Показываем активный слайд */
+    display: block; /* Показываем текущий слайд */
   }
   
   .slide-image {

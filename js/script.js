@@ -12,7 +12,7 @@ function moveSlide(step) {
   if (slideIndex < 0) slideIndex = totalSlides - 1;
 
   // Скрываем все слайды
-  slides.forEach((slide, index) => {
+  slides.forEach(slide => {
     slide.classList.remove('active'); // Убираем класс active у всех слайдов
   });
 
