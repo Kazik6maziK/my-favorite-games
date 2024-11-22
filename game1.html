@@ -19,7 +19,7 @@
   </nav>
 
   <!-- Описание игры -->
-  <section class="game-description intro-text">
+  <section class="game-description">
     <h1>Helldivers II</h1>
     <p>Helldivers II — шутер от третьего лица, разработанный шведской компанией Arrowhead Game Studios и выпущенный Sony Interactive Entertainment для PlayStation 5 и Windows в феврале 2024 года. 
         Игра является продолжением (сиквелом) Helldivers, шутера с видом с верху 2015 года.
@@ -35,16 +35,16 @@
   </section>
 
   <!-- Трейлер игры (YouTube) -->
-  <section class="game-trailer">
+  <section class="game-trailer intro-text">
     <h2>Трейлер игры</h2>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/oD3pxbG9YYI?si=oC5rqI9Yv9r9Tsi8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </section>
 
   <!-- Слайдер с картинками игры -->
-  <section class="game-slider intro-text">
+  <section class="game-slider">
     <h2>Иллюстрации игры</h2>
-    <div class="slider-container game-slider">
-      <div class="slider">
+    <div class="slider-container">
+      <div class="slider" id="illustrations-slider">
         <div class="slide">
           <img src="images\game1\hl2src1.jpg" alt="Скриншот 1 игры 1" class="slide-image">
         </div>
@@ -83,8 +83,8 @@
   <!-- Смешные моменты (гиифки/видео) -->
   <section class="game-moments intro-text">
     <h2>Смешные моменты из игры</h2>
-    <div class="slider-container funny-moments">
-      <div class="slider">
+    <div class="slider-container">
+      <div class="slider" id="moments-slider">
         <div class="slide">
           <img src="images/funny_moment1.gif" alt="Смешной момент 1" class="slide-image">
         </div>
@@ -100,6 +100,6 @@
     </div>
   </section>
 
-  <script src="js/script.js"></script>
+  <script src="js/game.js"></script>
 </body>
 </html>
