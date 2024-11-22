@@ -1,32 +1,41 @@
-// Функция для отображения слайда в конкретном слайдере
-function showSlide(sliderId, index) {
-    const slides = document.querySelectorAll(`#${sliderId} .slide`);
-    const slider = document.querySelector(`#${sliderId}`);
-    
-    // Проверяем границы индекса
-    if (index >= slides.length) {
-      currentSlide[sliderId] = 0;
-    } else if (index < 0) {
-      currentSlide[sliderId] = slides.length - 1;
-    } else {
-      currentSlide[sliderId] = index;
+let currentSlideIndex1 = 0; // Индекс текущего слайда для первого слайдера
+let currentSlideIndex2 = 0; // Индекс текущего слайда для второго слайдера
+
+function moveSlide(direction, sliderId) {
+  let slides;
+  if (sliderId === 'slider1') {
+    slides = document.querySelectorAll(`#${sliderId} .slide`);
+    currentSlideIndex1 += direction;
+    if (currentSlideIndex1 < 0) {
+      currentSlideIndex1 = slides.length - 1;
+    } else if (currentSlideIndex1 >= slides.length) {
+      currentSlideIndex1 = 0;
     }
-  
-    const slideWidth = slides[0].clientWidth;
-    slider.style.transform = `translateX(-${currentSlide[sliderId] * slideWidth}px)`;
+  } else if (sliderId === 'slider2') {
+    slides = document.querySelectorAll(`#${sliderId} .slide`);
+    currentSlideIndex2 += direction;
+    if (currentSlideIndex2 < 0) {
+      currentSlideIndex2 = slides.length - 1;
+    } else if (currentSlideIndex2 >= slides.length) {
+      currentSlideIndex2 = 0;
+    }
   }
-  
-  // Функция для изменения слайда в конкретном слайдере
-  function moveSlide(direction, sliderId) {
-    currentSlide[sliderId] += direction;
-    showSlide(sliderId, currentSlide[sliderId]);
-  }
-  
-  // Инициализация слайдеров
-  let currentSlide = {};
-  document.querySelectorAll('.slider').forEach(slider => {
-    const sliderId = slider.id;
-    currentSlide[sliderId] = 0;
-    showSlide(sliderId, currentSlide[sliderId]);
+
+  // Прячем все слайды
+  slides.forEach((slide) => {
+    slide.style.display = 'none';
   });
-  
+
+  // Показываем текущий слайд
+  if (sliderId === 'slider1') {
+    slides[currentSlideIndex1].style.display = 'block';
+  } else if (sliderId === 'slider2') {
+    slides[currentSlideIndex2].style.display = 'block';
+  }
+}
+
+// Инициализация первого слайдера
+document.addEventListener('DOMContentLoaded', function () {
+  moveSlide(0, 'slider1'); // Показываем первый слайд при загрузке страницы
+  moveSlide(0, 'slider2'); // Показываем первый слайд при загрузке страницы
+});
