@@ -70,13 +70,13 @@ body {
     transition: transform 0.5s ease-in-out;
   }
   
-  .slide {
+  .slide, .funny-slide {
     min-width: 100%;
     box-sizing: border-box;
     position: relative;
   }
   
-  .slide-image {
+  .slide-image, .moment-image {
     width: 100%;
     height: auto;
   }
