@@ -55,7 +55,11 @@ body {
   .navbar ul li a:hover {
     text-decoration: underline;
   }
-  
+
+  .game-trailer {
+    max-width: 800px;
+
+  }
   /* Слайдер */
 .slider-container {
     position: relative;
