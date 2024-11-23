@@ -3,69 +3,115 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Игра 2 - Мои любимые игры</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>War Thunder</title>
+  <link rel="stylesheet" href="css/game.css">
 </head>
 <body>
   <!-- Навигационное меню -->
   <nav class="navbar">
     <ul>
       <li><a href="index.html">Главная</a></li>
-      <li><a href="game1.html">Игра 1</a></li>
-      <li><a href="game2.html">Игра 2</a></li>
+      <li><a href="game1.html">Helldivers II</a></li>
+      <li><a href="game2.html">War Thunder</a></li>
       <li><a href="game3.html">Игра 3</a></li>
       <li><a href="game4.html">Игра 4</a></li>
     </ul>
   </nav>
 
   <!-- Описание игры -->
-  <section class="game-description">
-    <h1>Игра 2</h1>
-    <p>Здесь будет описание игры. Расскажите о её особенностях, механике и интересных моментах.</p>
+  <section class="game-description intro-text">
+    <h1>War Thunder</h1>
+    <p>компьютерная многопользовательская онлайн-игра с элементами симулятора, 
+      посвящённая авиации, бронетехнике и флоту довоенного периода, 
+      а также Второй мировой войны и послевоенного периода. 
+      Проект разрабатывается и издаётся компанией Gaijin Entertainment.
+      Вместо привычных очков здоровья в игре реализована модульная система повреждений, 
+      в которой каждый элемент конструкции танка имеет свои собственные очки здоровья.
+    </p>
   </section>
 
   <!-- Трейлер игры (YouTube) -->
-  <section class="game-trailer">
+  <section class="game-trailer intro-text">
     <h2>Трейлер игры</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/your_video_id" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="trailer-container">
+      <iframe 
+        src="https://www.youtube.com/embed/miVz9nsMYEw?si=ai32-hZ8V8WAXGR0" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
   </section>
 
   <!-- Слайдер с картинками игры -->
-  <section class="game-slider">
+  <section class="game-slider intro-text">
     <h2>Иллюстрации игры</h2>
-    <div class="slider-container">
+    <div class="slider-container" id="slider1">
       <div class="slider">
         <div class="slide">
-          <img src="images/game1_image1.jpg" alt="Скриншот 1 игры 2" class="slide-image">
+          <img src="images\game2\wtsrc1.jpg" alt="Скриншот 1 игры 2" class="slide-image">
         </div>
         <div class="slide">
-          <img src="images/game1_image2.jpg" alt="Скриншот 2 игры 2" class="slide-image">
+          <img src="images\game2\wtsrc2.jpg" alt="Скриншот 2 игры 2" class="slide-image">
         </div>
         <div class="slide">
-          <img src="images/game1_image3.jpg" alt="Скриншот 3 игры 2" class="slide-image">
+          <img src="images\game2\wtsrc3.jpg" alt="Скриншот 3 игры 2" class="slide-image">
+        </div>
+        <div class="slide">
+            <img src="images\game2\wtsrc4.jpg" alt="Скриншот 4 игры 2" class="slide-image">
+        </div>
+        <div class="slide">
+            <img src="images\game2\wtsrc5.jpg" alt="Скриншот 5 игры 2" class="slide-image">
         </div>
       </div>
-      <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-      <button class="next" onclick="moveSlide(1)">&#10095;</button>
+      <button class="prev" onclick="moveSlide(-1, 'slider1')">&#10094;</button>
+      <button class="next" onclick="moveSlide(1, 'slider1')">&#10095;</button>
     </div>
   </section>
 
   <!-- Ваше мнение об игре -->
-  <section class="game-opinion">
+  <section class="game-opinion intro-text">
     <h2>Моё мнение об игре</h2>
-    <p>Здесь будет ваше личное мнение об игре, почему она вам нравится и что вам в ней особенно нравится.</p>
+    <p>
+      Warthunder — это, без сомнения, одна из самых масштабных и увлекательных военных игр. 
+      В ней удивительно совмещены историческая точность, разнообразие техники и динамичный геймплей. 
+      Возможность управлять танками, самолётами, кораблями и вертолётами создаёт невероятное чувство свободы.
+      Бои всегда насыщенные, а внимательность к деталям, вроде проработки физики и моделей повреждений, действительно поражает.
+      Однако лично я несмотря на всё этои моменты сильно устал от игры.
+      Скорее всего, из-за большого количества времени, которое она требует для прогресса. 
+      В какой-то момент я почувствовал, что удовольствие от игры начинает пропадать и появляется рутинная работа по прокачке. 
+      Тем не менее, она оставила у меня много ярких воспоминаний, и я считаю что в Warthunder стоит поиграть.
+    </p>
   </section>
 
-  <!-- Смешные моменты (гиифки/видео) -->
-  <section class="game-moments">
-    <h2>Смешные моменты из игры</h2>
-    <p>Здесь можно добавить ваши смешные моменты — гифки или видео.</p>
-    <img src="images/funny_moment.gif" alt="Смешной момент 1" class="moment-image">
-    <video width="320" height="240" controls>
-      <source src="videos/funny_moment.mp4" type="video/mp4">
-      Ваш браузер не поддерживает видео тег.
-    </video>
-  </section>
+  <!-- Смешные моменты (гиифки/видео)
+  <section class="game-moments intro-text">
+    <h2>Интересные моменты из игры</h2>
+    <div class="slider-container" id="slider2">
+      <div class="slider">
+        <div class="slide">
+          <video autoplay loop muted>
+            <source src="images\game1\hl2v1.mp4" type="video/mp4" alt="Смешной момент 1" class="slide-video">
+            Ваш браузер не поддерживает видео.
+          </video>
+        </div>
+        <div class="slide">
+          <video autoplay loop muted>
+            <source src="images\game1\hl2v2.mp4" type="video/mp4" alt="Смешной момент 2" class="slide-video">
+            Ваш браузер не поддерживает видео.
+          </video>
+        </div>
+        <div class="slide">
+          <video autoplay loop muted>
+            <source src="images\game1\hl2v3.mp4" type="video/mp4" alt="Смешной момент 3" class="slide-video">
+            Ваш браузер не поддерживает видео.
+          </video>
+        </div>
+      </div>
+      <button class="prev" onclick="moveSlide(-1, 'slider2')">&#10094;</button>
+      <button class="next" onclick="moveSlide(1, 'slider2')">&#10095;</button>
+    </div>
+  </section> -->
 
   <script src="js/game.js"></script>
 </body>
