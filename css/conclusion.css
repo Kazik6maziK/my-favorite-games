@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  /* Стиль для вступительного текста */
+.intro-text {
+    text-align: center;
+    padding: 40px;
+    background-color: #f4f4f4;
+    margin-bottom: 20px;
+  }
+  
+  .intro-text h1 {
+    font-size: 2.5em;
+    color: #333;
+  }
+  .intro-text h2 {
+    font-size: 2em;
+    color: #333;
+  }
+  .intro-text p {
+    font-size: 1.2em;
+    color: #555;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  /* Навигационное меню */
+  .navbar {
+    background-color: #333;
+    padding: 10px;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navbar ul li {
+    margin: 0 15px;
+  }
+  
+  .navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .navbar ul li a:hover {
+    text-decoration: underline;
+  }
+
+
+/* Общий стиль заключения */
+.conclusion {
+    padding: 40px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .conclusion h2 {
+    font-size: 2.5em;
+    color: #333;
+  }
+  
+  .conclusion p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 20px;
+  }
+  
+  .conclusion h3 {
+    font-size: 2em;
+    color: #333;
+    margin-top: 40px;
+  }
+  
+  /* Стиль формы */
+  #feedback-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  #feedback-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+  }
+  
+  #feedback-form input, 
+  #feedback-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+  }
+  
+  #feedback-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  
+  #feedback-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Отзывы */
+  #reviews {
+    margin-top: 20px;
+    text-align: left;
+    max-width: 800px;
+    margin: 20px auto;
+  }
+  
+  #reviews p {
+    padding: 10px;
+    background-color: #eee;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
