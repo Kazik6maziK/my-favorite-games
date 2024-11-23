@@ -97,16 +97,17 @@ body {
     align-items: center;
     width: 100%; /* Каждый слайд занимает всю ширину контейнера */
   }
-  
+
   .slide video {
     width: 100%;
     height: 100%;
     object-fit: contain; /* Видео полностью помещается в контейнер */
-    border-radius: 10px; /* Опционально, для красоты */
+    border-radius: 10px; 
   }
   .slide-image {
     width: 100%;
     height: auto;
+    border-radius: 10px;
   }
   
   button.prev, button.next {
