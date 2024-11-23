@@ -23,6 +23,7 @@ body {
   .intro-text p {
     font-size: 1.2em;
     color: #555;
+    max-width: 1000px;
     margin: 0 auto;
     line-height: 1.6;
   }
@@ -59,7 +60,9 @@ body {
 /* Контейнер для трейлера */
 .trailer-container {
   position: relative; 
-  max-width: 1440px;
+  justify-content: center;
+  max-width: 80%;
+  margin: 0 10%;
   padding-top: 56.25%; /* Соотношение сторон 16:9 */
   overflow: hidden; 
 }
@@ -78,8 +81,7 @@ body {
   .slider-container {
     position: relative;
     width: 80%; /* Занимает 80% ширины экрана */
-    max-width: 1200px; /* Максимальная ширина */
-    aspect-ratio: 16 / 9; /* Соотношение сторон 16:9 */
+    max-width: 1000px; /* Максимальная ширина */
     margin: 30px auto;
     overflow: hidden;
   }
