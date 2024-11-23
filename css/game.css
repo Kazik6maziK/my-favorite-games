@@ -60,7 +60,6 @@ body {
 .trailer-container {
   position: relative; 
   width: 100%; 
-  margin:0 40px 0 40px;
   padding-top: 56.25%; /* Соотношение сторон 16:9 */
   overflow: hidden; 
 }
