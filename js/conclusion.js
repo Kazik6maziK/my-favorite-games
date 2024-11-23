@@ -1,7 +1,7 @@
 document.getElementById("feedback-form").addEventListener("submit", function (event) {
-    event.preventDefault(); // Останавливаем стандартное поведение формы
+    event.preventDefault(); // стандартное поведение формы
   
-    // Получаем данные формы
+    // Получ данные формы
     const name = document.getElementById("name").value;
     const message = document.getElementById("message").value;
   

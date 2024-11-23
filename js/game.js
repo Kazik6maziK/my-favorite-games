@@ -7,7 +7,7 @@ function moveSlide(direction, sliderId) {
   // Скрываем все слайды
   slides.forEach(slide => (slide.style.display = "none"));
 
-  // Обновляем индекс текущего слайда
+  // Обновление индекса текущего слайда
   currentSlides[sliderId] += direction;
 
   if (currentSlides[sliderId] < 0) {
@@ -16,7 +16,7 @@ function moveSlide(direction, sliderId) {
     currentSlides[sliderId] = 0;
   }
 
-  // Показываем текущий слайд
+  //  текущий слайд
   slides[currentSlides[sliderId]].style.display = "block";
 }
 
